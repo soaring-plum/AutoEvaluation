@@ -61,8 +61,8 @@ if __name__ == '__main__':
     t3 = "16"  # 你学习该课程课外花费的学时数是？（含作业、习题、小论文、报告、设计等，按学时来计，45分钟计作1学时）
     t4 = "好"  # 最后的评语
     c = [2, 6, 11, 16, 21, 26, 31, 36, 41, 46, 51, 56]  # 按顺序点的radio位置，当前分数为96.40
-    j1 = True
-    j2 = False
+    j1 = True#True时，对未评的教师进行评价并保存，不提交
+    j2 = False#True时，一键提交已经保存的评教
 
     driver = webdriver.Chrome()  # Chrome浏览器
     driver.maximize_window()  # 窗口最大化
