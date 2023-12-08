@@ -71,8 +71,11 @@ if __name__ == '__main__':
     id = input("输入学号（必填）：")
     pw = input("输入密码（如果浏览器输入请直接回车）：")
 
-    driver.find_element(By.ID, "yhm").send_keys(id)
-    driver.find_element(By.ID, "mm").send_keys(pw)
+    try:
+        driver.find_element(By.ID, "yhm").send_keys(id)
+        driver.find_element(By.ID, "mm").send_keys(pw)
+    except:
+        print("报错了额。。。。如果正常进行可以忽略")
     input("请输入账号密码，并验证后按下回车键继续：")
     driver.maximize_window()  # 窗口最大化
     if iselement(driver, "dl"):  # 判断页面是不是有登录按钮
